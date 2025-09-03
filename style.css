@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
 
 
@@ -21,11 +20,51 @@ body {
     color: #f4efe7;
 }
 
-.capBox {
-    display: none;
+button {
+    cursor: pointer;
 }
 
-.page1 {
+.capBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.caplogo {
+    position: relative;
+    width: 42rem;
+    height: 15rem;
+    border-radius: 100px;
+    background: #2b2724;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.caplogo h1 {
+    position: relative;
+    font-size: 3.8rem;
+    font-weight: 400;
+    color: #2b2724;
+    z-index: 1;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #f4f0e7;
+    z-index: 0;
+}
+
+.page1,
+.page2,
+.page3 {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -36,6 +75,8 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+    clip-path: inset(33% 33% 33% 33%);
+    transition: 0.3s ease-out;
 }
 
 .background {
@@ -56,7 +97,8 @@ body {
     object-fit: cover;
 }
 
-.background .top, .background .bottom {
+.background .top,
+.background .bottom {
     position: absolute;
     width: calc(100% - 1rem);
     padding: 0 1rem;
@@ -107,4 +149,36 @@ body {
     width: 20%;
     font-weight: 400;
     line-height: 2.5rem;
+}
+
+.bottom h4 {
+    width: 18rem;
+    font-size: 0.9rem;
+}
+
+
+.page2 {
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    height: 150vh;
+}
+
+.page2 h4 {
+    margin-top: 5.5rem;
+    width: 90%;
+    color: white;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 6rem;
+}
+
+.page2 .bottom {
+    position: absolute;
+    top: 22%;
+    left: 0;
+    width: 100%;
+    height: 20rem;
+    background: #291718;
+    opacity: 0.93;
 }
